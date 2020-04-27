@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#292727"
+    tools:actionBarNavMode="standard"
+    tools:context=".UpdateSpeedDial">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputSpeedDialLabel"
+        android:layout_width="327dp"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/speed_dial_label"
+            android:textColor="#676666" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputSpeedDialNumber"
+        android:layout_width="327dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputSpeedDialLabel">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/speed_dial_phone_number"
+            android:textColor="#676666" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/uqdokbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popupbuttonstyle"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textInputSpeedDialLabel"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="@+id/textInputSpeedDialLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textInputSpeedDialNumber"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <Button
+        android:id="@+id/uqdcancelbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popupbuttonstyle"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/uqdokbtn"
+        app:layout_constraintEnd_toEndOf="@+id/textInputSpeedDialLabel"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/textInputSpeedDialLabel"
+        app:layout_constraintTop_toTopOf="@+id/uqdokbtn" />
+
+    <TextView
+        android:id="@+id/speedDialButtonNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#676666"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textInputSpeedDialLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

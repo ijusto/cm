@@ -1,26 +1,27 @@
 package com.example.cmhw1dialler;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.lifecycle.AndroidViewModel;
-
 import android.Manifest;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.AbsoluteSizeSpan;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.textfield.TextInputEditText;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
-
     // Defining Permission codes.
     // We can give any value
     // but unique for each permission.
@@ -31,32 +32,68 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton[] imgsBtns = {findViewById(R.id.imageButton0), findViewById(R.id.imageButton1),
-                findViewById(R.id.imageButton2), findViewById(R.id.imageButton3),
-                findViewById(R.id.imageButton4), findViewById(R.id.imageButton5),
-                findViewById(R.id.imageButton6), findViewById(R.id.imageButton7),
-                findViewById(R.id.imageButton8), findViewById(R.id.imageButton9),
-                findViewById(R.id.imageButtonAsterisc), findViewById(R.id.imageButtonHashtag)};
+        final Dialog quickDial = new Dialog(MainActivity.this);
 
-        for (final ImageButton imgsBtn : imgsBtns) {
-            final String number = getResources().getResourceEntryName(imgsBtn.getId()).split("imageButton")[1];
+        Button[] numberBtns = {findViewById(R.id.button0), findViewById(R.id.button1),
+                findViewById(R.id.button2), findViewById(R.id.button3),
+                findViewById(R.id.button4), findViewById(R.id.button5),
+                findViewById(R.id.button6), findViewById(R.id.button7),
+                findViewById(R.id.button8), findViewById(R.id.button9),
+                findViewById(R.id.buttonAsterisc), findViewById(R.id.buttonHashtag)};
+
+        SpannableString[] stringBtns = {new SpannableString("0\n+"), new SpannableString("1"),
+                new SpannableString("2\nABC"), new SpannableString("3\nDEF"),
+                new SpannableString("4\nGHI"), new SpannableString("5\nJKL"),
+                new SpannableString("6\nMNO"), new SpannableString("7\nPQRS"),
+                new SpannableString("8\nTUV"), new SpannableString("9\nWXYZ"),
+                new SpannableString("*"), new SpannableString("#")};
+        for (int btnIndex = 0; btnIndex < numberBtns.length; btnIndex++) {
+            final Button numBtn = numberBtns[btnIndex];
+            stringBtns[btnIndex].setSpan(new AbsoluteSizeSpan(45, true), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            numBtn.setText(stringBtns[btnIndex]);
+            final String number = getResources().getResourceEntryName(numBtn.getId()).split("button")[1];
             final String input = number.equals("Asterisc") ? "*" : (number.equals("Hashtag") ? "#" : number);
             System.out.println(number);
-            imgsBtn.setOnClickListener(new View.OnClickListener() {
+            numBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     inputButton(input);
                 }
             });
-            if (input.equals("0")) {
-                imgsBtn.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
+
+            numBtn.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    if (input.equals("0")) {
                         inputButton("+");
-                        return true;
+                    } else if (Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9").contains(input)) {
+                        //if(((TextView) findViewById(R.id.phoneNumberInput)).getText().length() == 0){
+                            quickDial.setContentView(R.layout.quickdialpopup);
+                            ((TextView) quickDial.findViewById(R.id.dialogQuestion)).setText(
+                                    "Assign a quick dial number " +
+                                    //((TextView) findViewById(R.id.phoneNumberInput)).getText() +
+                                    " to this button?");
+                            quickDial.findViewById(R.id.qdyesbtn).setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    SharedPreferences prefs = MainActivity.this.getSharedPreferences("com.example.cmhw1dialler", Context.MODE_PRIVATE);
+
+                                    prefs.edit().putString("dialButton", input).apply();
+                                    startActivity(new Intent(getApplicationContext(), UpdateSpeedDial.class));
+                                }
+                            });
+                            quickDial.findViewById(R.id.qdcancelbtn).setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    quickDial.dismiss();
+                                }
+                            });
+                            quickDial.show();
+                        //}
                     }
-                });
-            }
+                    return true;
+                }
+            });
         }
 
         ImageButton deleteBtn = findViewById(R.id.delete);
@@ -67,15 +104,34 @@ public class MainActivity extends AppCompatActivity {
                 if (phoneNumberInput.getText().length() != 0) {
                     phoneNumberInput.setText(phoneNumberInput.getText().subSequence(0, phoneNumberInput.getText().length() - 1));
                 }
+                if (phoneNumberInput.getText().length() == 1) {
+                    SharedPreferences prefs = MainActivity.this.getSharedPreferences("com.example.cmhw1dialler", Context.MODE_PRIVATE);
+                    String quickdiallabel = prefs.getString(phoneNumberInput.getText() + "-label", "null");
+                    if (!quickdiallabel.equals("null")) {
+                        ((TextView) findViewById(R.id.dialLabeltextview)).setText(quickdiallabel);
+                    }
+                } else {
+                    ((TextView) findViewById(R.id.dialLabeltextview)).setText("");
+                }
             }
         });
+
 
         FloatingActionButton callBtn = findViewById(R.id.callBtn);
         callBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView phoneNumberInput = findViewById(R.id.phoneNumberInput);
-                dialPhoneNumber((String) phoneNumberInput.getText());
+                SharedPreferences prefs = MainActivity.this.getSharedPreferences("com.example.cmhw1dialler", Context.MODE_PRIVATE);
+
+                TextView phoneNumber = findViewById(R.id.phoneNumberInput);
+                if(phoneNumber.getText().length() ==1){
+                    String quickdiallabel = prefs.getString(phoneNumber.getText() + "-label", "null");
+                    if (!quickdiallabel.equals("null")){
+                        dialPhoneNumber(prefs.getString(phoneNumber.getText() + "-phonenumber", "null"));
+                    }
+                } else {
+                    dialPhoneNumber((String) phoneNumber.getText());
+                }
             }
         });
     }
@@ -83,7 +139,17 @@ public class MainActivity extends AppCompatActivity {
     public void inputButton(String input) {
         TextView phoneNumberInput = findViewById(R.id.phoneNumberInput);
         if (phoneNumberInput.getText().length() < 13) {
-            phoneNumberInput.setText(phoneNumberInput.getText() + input);
+            String phoneNumber = phoneNumberInput.getText() + input;
+            SharedPreferences prefs = MainActivity.this.getSharedPreferences("com.example.cmhw1dialler", Context.MODE_PRIVATE);
+            if(phoneNumber.length() == 1) {
+                String quickdiallabel = prefs.getString(phoneNumber + "-label", "null");
+                if (!quickdiallabel.equals("null")) {
+                    ((TextView) findViewById(R.id.dialLabeltextview)).setText(quickdiallabel);
+                }
+            } else {
+                ((TextView) findViewById(R.id.dialLabeltextview)).setText("");
+            }
+            phoneNumberInput.setText(phoneNumber);
         }
     }
 

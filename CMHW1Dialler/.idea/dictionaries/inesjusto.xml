@@ -2,8 +2,11 @@
   <dictionary name="inesjusto">
     <words>
       <w>asterisc</w>
+      <w>cancelbtn</w>
       <w>hashtag</w>
       <w>imgs</w>
+      <w>popupbuttonstyle</w>
+      <w>yesbtn</w>
     </words>
   </dictionary>
 </component>
