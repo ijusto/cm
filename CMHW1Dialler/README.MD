@@ -10,4 +10,4 @@ You should add a set of 3 “speed dial” buttons.When the user does a long pre
 Note: you don’t need to save the definition of the speed dials, but if you choose to, consider using SharedPreferences.
 
 ## Demo
-![Demo](https://github.com/ijusto/cm/tree/master/CMHW1Dialler/Demo.gif?raw=true)
+![Demo](https://github.com/ijusto/cm/edit/master/CMHW1Dialler/README.MD)
