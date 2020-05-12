@@ -8,6 +8,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
     private static RecyclerView mCitiesRecyclerView;
     private static CityListAdapter mCitiesAdapter;
     private static Context mainContext;
+    private static int gridColumnCount;
 
     static IpmaWeatherClient client = new IpmaWeatherClient();
     private static HashMap<String, City> cities;
@@ -45,11 +47,18 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        gridColumnCount = getResources().getInteger(R.integer.grid_column_count);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         // Get a handle to the RecyclerView.
         mCitiesRecyclerView = findViewById(R.id.citiesRecyclerView);
+        // Give the RecyclerView a default layout manager.
+        // Change the LinearLayoutManager for the RecyclerView to a GridLayoutManager,
+        // passing in the context and the newly created integer:
+        mCitiesRecyclerView.setLayoutManager(new
+                GridLayoutManager(mainContext, gridColumnCount));
         // Create an adapter and supply the data to be displayed.
         mCitiesAdapter = new CityListAdapter(this, cities);
 
@@ -115,8 +124,6 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
                     mCitiesAdapter.setClickListener((ItemClickListener) mainContext);
                     // Connect the adapter with the RecyclerView.
                     mCitiesRecyclerView.setAdapter(mCitiesAdapter);
-                    // Give the RecyclerView a default layout manager.
-                    mCitiesRecyclerView.setLayoutManager(new LinearLayoutManager(mainContext));
                 }
                 cities = citiesCollection;
                 if(city != null) {
