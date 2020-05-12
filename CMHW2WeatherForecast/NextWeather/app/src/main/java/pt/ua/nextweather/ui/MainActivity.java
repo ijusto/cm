@@ -61,7 +61,11 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
                 GridLayoutManager(mainContext, gridColumnCount));
         // Create an adapter and supply the data to be displayed.
         mCitiesAdapter = new CityListAdapter(this, cities);
-
+        
+        mCitiesAdapter.setClickListener((ItemClickListener) mainContext);
+        // Connect the adapter with the RecyclerView.
+        mCitiesRecyclerView.setAdapter(mCitiesAdapter);
+        getWeatherDescriptions(null);
         feedback = findViewById(R.id.tvFeedback);
         mainContext = this;
     }
