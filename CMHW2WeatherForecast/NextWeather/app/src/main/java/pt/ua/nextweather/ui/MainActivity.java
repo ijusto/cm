@@ -1,7 +1,9 @@
 package pt.ua.nextweather.ui;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -61,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
                 GridLayoutManager(mainContext, gridColumnCount));
         // Create an adapter and supply the data to be displayed.
         mCitiesAdapter = new CityListAdapter(this, cities);
-        
         mCitiesAdapter.setClickListener((ItemClickListener) mainContext);
         // Connect the adapter with the RecyclerView.
         mCitiesRecyclerView.setAdapter(mCitiesAdapter);
@@ -175,9 +176,17 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
             if(p == position){
                 mCurrent = Objects.requireNonNull(cities.get(key)).getLocal();
                 Context context = view.getContext();
-                Intent intent = new Intent(context, WeatherInfo.class);
-                intent.putExtra("mCurrent", mCurrent);
-                context.startActivity(intent);
+                if(view.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+                    InfoDetailFragment fragment = InfoDetailFragment.newInstance(mCurrent);
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.detail_fragment_container, fragment)
+                            .addToBackStack(null)
+                            .commit();
+                } else {
+                    Intent intent = new Intent(context, WeatherInfo.class);
+                    intent.putExtra("mCurrent", mCurrent);
+                    context.startActivity(intent);
+                }
                 break;
             }
             p++;

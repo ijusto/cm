@@ -3,6 +3,7 @@ package pt.ua.nextweather.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -22,6 +23,7 @@ import pt.ua.nextweather.R;
  */
 public class InfoDetailFragment extends Fragment {
 
+    private String city;
     public InfoDetailFragment() {
         // Required empty public constructor
     }
@@ -32,16 +34,19 @@ public class InfoDetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_info_detail, container, false);
-        WeatherInfo.getInfo();
+        MainActivity.getWeatherDescriptions(city);
 
         return view;
     }
 
-    public void setText(String text) {
-
+    public void setCity(String cityForDetails) {
+        city = cityForDetails;
+        MainActivity.getWeatherDescriptions(city);
     }
 
-    public static InfoDetailFragment newInstance() {
-        return new InfoDetailFragment();
+    public static InfoDetailFragment newInstance(String cityForDetails) {
+        InfoDetailFragment fragment = new InfoDetailFragment();
+        fragment.setCity(cityForDetails);
+        return fragment;
     }
 }

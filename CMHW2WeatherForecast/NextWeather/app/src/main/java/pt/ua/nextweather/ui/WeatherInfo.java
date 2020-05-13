@@ -7,9 +7,12 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 
 import android.util.Log;
 import android.view.View;
+import android.widget.FrameLayout;
 
 import java.util.Objects;
 
@@ -28,9 +31,16 @@ public class WeatherInfo extends AppCompatActivity {
         setSupportActionBar(toolbar);
         city = (String) Objects.requireNonNull(getIntent().getExtras()).get("mCurrent");
         Log.i("CIDADE", city);
+
+        FragmentManager fm = getSupportFragmentManager();
+
+        InfoDetailFragment fragment = (InfoDetailFragment)fm.findFragmentById(R.id.detail_fragment_container);
+        assert fragment != null;
+        fragment.setCity(city);
+
     }
 
-    public static void getInfo(){
-        MainActivity.getWeatherDescriptions(city);
+    public static String getCity(){
+        return city;
     }
 }
