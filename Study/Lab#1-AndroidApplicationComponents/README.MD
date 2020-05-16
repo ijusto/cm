@@ -23,22 +23,22 @@ These references provide the “theoretical” support for the labs. Mostcontent
   * [Slides](https://docs.google.com/presentation/d/1aVIE8p73jWMv-3_nvx9HufCK_kgqvwNpzFNSCTQXnZ0/edit) (adapted from Google’s Android Developer Fundamentals course)
 
 
-##Lab
+## Lab
 
   1. [Code labs for “Lesson 2.x –Activities and intents”](https://developer.android.com/courses/fundamentals-training/toc-v2) → no fragments (empty template)
     Note: in this series, in thenew project creation wizard, select “use **legacy android.support** libraries”.
         * Task 1: Create the TwoActivities project
         * Task 2: Create and launch the second Activity
-            Each new activity you add to your project has its own layout and Java files, separate from those of the main activity. They also have their own <activity> elements in the AndroidManifest.xml file. As with the main activity, new activity implementations that you create in Android Studio also extend from the AppCompatActivity class.
-            Each activity in your app is only loosely connected with other activities. However, you can define an activity as a parent of another activity in the AndroidManifest.xml file. This parent-child relationship enables Android to add navigation hints such as left-facing arrows in the title bar for each activity.
-            An activity communicates with other activities (in the same app and across different apps) with an intent. An Intent can be explicit or implicit:
+            * Each new activity you add to your project has its own layout and Java files, separate from those of the main activity. They also have their own <activity> elements in the AndroidManifest.xml file. As with the main activity, new activity implementations that you create in Android Studio also extend from the AppCompatActivity class.
+            * Each activity in your app is only loosely connected with other activities. However, you can define an activity as a parent of another activity in the AndroidManifest.xml file. This parent-child relationship enables Android to add navigation hints such as left-facing arrows in the title bar for each activity.
+            * An activity communicates with other activities (in the same app and across different apps) with an intent. An Intent can be explicit or implicit:
                 * An explicit intent is one in which you know the target of that intent; that is, you already know the fully qualified class name of that specific activity.
                 * An implicit intent is one in which you do not have the name of the target component, but have a general action to perform.
-            In this task you add a second activity to our app, with its own layout. You modify the AndroidManifest.xml file to define the main activity as the parent of the second activity. Then you modify the launchSecondActivity() method in MainActivity to include an intent that launches the second activity when you click the button.
+            * In this task you add a second activity to our app, with its own layout. You modify the AndroidManifest.xml file to define the main activity as the parent of the second activity. Then you modify the launchSecondActivity() method in MainActivity to include an intent that launches the second activity when you click the button.
         * Task 3: Send data from the main Activity to the second Activity
-            In the last task, you added an explicit intent to MainActivity that launched SecondActivity. You can also use an intent to send data from one activity to another while launching it.
-            Your intent object can pass data to the target activity in two ways: in the data field, or in the intent extras. The intent data is a URI indicating the specific data to be acted on. If the information you want to pass to an activity through an intent is not a URI, or you have more than one piece of information you want to send, you can put that additional information into the extras instead.
-            The intent extras are key/value pairs in a [Bundle](https://developer.android.com/reference/android/os/Bundle.html). A Bundle is a collection of data, stored as key/value pairs. To pass information from one activity to another, you put keys and values into the intent extra Bundle from the sending activity, and then get them back out again in the receiving activity.
-            In this task, you modify the explicit intent in MainActivity to include additional data (in this case, a user-entered string) in the intent extra Bundle. You then modify SecondActivity to get that data back out of the intent extra Bundle and display it on the screen.
+            * In the last task, you added an explicit intent to MainActivity that launched SecondActivity. You can also use an intent to send data from one activity to another while launching it.
+            * Your intent object can pass data to the target activity in two ways: in the data field, or in the intent extras. The intent data is a URI indicating the specific data to be acted on. If the information you want to pass to an activity through an intent is not a URI, or you have more than one piece of information you want to send, you can put that additional information into the extras instead.
+            * The intent extras are key/value pairs in a [Bundle](https://developer.android.com/reference/android/os/Bundle.html). A Bundle is a collection of data, stored as key/value pairs. To pass information from one activity to another, you put keys and values into the intent extra Bundle from the sending activity, and then get them back out again in the receiving activity.
+            * In this task, you modify the explicit intent in MainActivity to include additional data (in this case, a user-entered string) in the intent extra Bundle. You then modify SecondActivity to get that data back out of the intent extra Bundle and display it on the screen.
         * Task 4: Return data back to the main Activity
   2. “[Build yourfirst app](https://codelabs.developers.google.com/codelabs/build-your-first-android-app/index.html#2)” (in Java) → modern approach, with fragments.

@@ -1,4 +1,4 @@
-# Lab #3: Local data management
+# Lab #2 - Flexible UI
 
 ## Readings & concepts 
 These references provide the “theoretical” support for the labs. 

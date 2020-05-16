@@ -1,6 +1,6 @@
 # Homework
 
-## CM-HW1
+## CM-HW2
 Build an app that offers a weather forecast. 
 The user should, first, select a city from a list of cities, and then get the forecast for the upcoming days. 
 
