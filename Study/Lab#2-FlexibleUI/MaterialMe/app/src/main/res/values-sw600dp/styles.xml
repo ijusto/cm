@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Android uses this file whenever the app runs on a tablet. -->
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="SportsDetailText" parent="TextAppearance.AppCompat.Headline"/>
+    <!-- The Android predefined Display1 style uses the textColorSecondary value from the current
+         theme (ThemeOverlay.AppCompat.Dark), which in this case is a light gray color. The light
+         gray color does not show up well on the banner images in your app. To correct this add an
+         "android:textColor" attribute to the SportsTitle style and set it to
+         "?android:textColorPrimary". The question mark tells Android runtime to find the value in
+         the theme applied to the View. In this example the theme is ThemeOverlay.AppCompat.Dark in
+         which the textColorPrimary attribute is white. -->
+    <style name="SportsTitle" parent="TextAppearance.AppCompat.Display1">
+        <item name=
+            "android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="SportsDetailTitle" parent="TextAppearance.AppCompat.Display3"/>
+</resources>

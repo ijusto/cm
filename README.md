@@ -1,2 +1,2 @@
-# cm
-Android Module homework assignments submissions from Mobile Computing class 
+#cm
+Android Module of Mobile Computing course

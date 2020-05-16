@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.twoactivities">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- The label attribute adds the title of the Activity to the app bar. -->
+        <!-- With the parentActivityName attribute, you indicate that the main activity is the
+             parent of the second activity. This relationship is used for Up navigation in your app:
+             the app bar for the second activity will have a left-facing arrow so the user can
+             navigate "upward" to the main activity. -->
+        <!-- With the <meta-data> element, you provide additional arbitrary information about the
+             activity in the form of key-value pairs. In this case the metadata attributes do the
+             same thing as the android:parentActivityName attribute—they define a relationship
+             between two activities for upward navigation. These metadata attributes are required
+             for older versions of Android, because the android:parentActivityName attribute is only
+             available for API levels 16 and higher. -->
+        <activity android:name=".SecondActivity"
+            android:label = "@string/activity2_name"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=
+                    "com.example.twoactivities.MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
