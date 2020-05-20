@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/home/inesjusto/.gradle/caches/transforms-2/files-2.1/927f1cbb7fce9332a6ed64bde338ef73/appcompat-1.0.0/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

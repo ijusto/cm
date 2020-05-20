@@ -10,14 +10,19 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.List;
@@ -34,22 +39,26 @@ import pt.ua.nextweather.network.WeatherTypesResultsObserver;
 
 public class MainActivity extends AppCompatActivity implements ItemClickListener{
 
-    private static TextView feedback;
     private static RecyclerView mCitiesRecyclerView;
     private static CityListAdapter mCitiesAdapter;
     private static Context mainContext;
-    private static int gridColumnCount;
+    private InfoDetailFragment fragment;
 
     static IpmaWeatherClient client = new IpmaWeatherClient();
     private static HashMap<String, City> cities;
     private static HashMap<Integer, WeatherType> weatherDescriptions;
 
+    /* To save the boolean value representing the Fragment display state, define a key for the
+       Fragment state to use in the savedInstanceState Bundle. */
+    static final String STATE_FRAGMENT = "state_of_fragment";
+    static final String DETAILS = "state_of_details";
+    private static String details = "";
+    private boolean isFragmentDisplayed = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        gridColumnCount = getResources().getInteger(R.integer.grid_column_count);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -59,16 +68,26 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         // Give the RecyclerView a default layout manager.
         // Change the LinearLayoutManager for the RecyclerView to a GridLayoutManager,
         // passing in the context and the newly created integer:
-        mCitiesRecyclerView.setLayoutManager(new
-                GridLayoutManager(mainContext, gridColumnCount));
+        mCitiesRecyclerView.setLayoutManager(new LinearLayoutManager(mainContext));
         // Create an adapter and supply the data to be displayed.
         mCitiesAdapter = new CityListAdapter(this, cities);
         mCitiesAdapter.setClickListener((ItemClickListener) mainContext);
         // Connect the adapter with the RecyclerView.
         mCitiesRecyclerView.setAdapter(mCitiesAdapter);
         getWeatherDescriptions(null);
-        feedback = findViewById(R.id.tvFeedback);
         mainContext = this;
+
+                /* It checks to see if the instance state of the Activity was saved for some reason, such as
+           a configuration change (the user switching from vertical to horizontal). If the saved
+           instance was not saved, it would be null. If the saved instance is not null, the code
+           retrieves the Fragment state from the saved instance, and sets the Button text: */
+        if (savedInstanceState != null) {
+            isFragmentDisplayed = savedInstanceState.getBoolean(STATE_FRAGMENT);
+            details = savedInstanceState.getString(DETAILS);
+            if (isFragmentDisplayed) {
+                ((TextView) findViewById(R.id.tvFeedback)).append(details);
+            }
+        }
     }
 
     @Override
@@ -97,9 +116,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
 
     public static void getWeatherDescriptions(String city) {
 
-        if (city != null) {
-            feedback.append("\nGetting forecast for: " + city + "\n");
-        }
+        Log.i("MainActivity", "\nGetting forecast for: " + city + "\n");
 
         // call the remote api, passing an (anonymous) listener to get back the results
         client.retrieveWeatherConditionsDescriptions(new WeatherTypesResultsObserver() {
@@ -110,9 +127,7 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
             }
             @Override
             public void onFailure(Throwable cause) {
-                if(city != null){
-                    feedback.append("Failed to get weather conditions!");
-                }
+                Log.i("MainActivity", "Failed to get weather conditions!");
             }
         });
 
@@ -137,16 +152,14 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
                         int locationId = cityFound.getGlobalIdLocal();
                         getForecastForCity(locationId);
                     } else {
-                        feedback.append("unknown city: " + city);
+                        Log.i("MainActivity", "unknown city: " + city);
                     }
                 }
             }
 
             @Override
             public void onFailure(Throwable cause) {
-                if(city != null) {
-                    feedback.append("Failed to get cities list!");
-                }
+                Log.i("MainActivity","Failed to get cities list!");
             }
         });
     }
@@ -155,36 +168,54 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         client.retrieveForecastForCity(localId, new ForecastForACityResultsObserver() {
             @Override
             public void receiveForecastList(List<Weather> forecast) {
+                details = "";
                 for (Weather day : forecast) {
-                    feedback.append(day.toString());
-                    feedback.append("\t");
+                    details += day.toString() + "\t";
                 }
             }
             @Override
             public void onFailure(Throwable cause) {
-                feedback.append( "Failed to get forecast for 5 days");
+                Log.i("MainActivity","Failed to get forecast for 5 days");
             }
         });
 
     }
 
     @Override
-    public void onClick(View view, int position) {
+    public void onListItemClick(View view, int position){
         String mCurrent = "";
         int p = 0;
         for(String key : cities.keySet()){
             if(p == position){
                 mCurrent = Objects.requireNonNull(cities.get(key)).getLocal();
-                Context context = view.getContext();
+                getWeatherDescriptions(mCurrent);
+
+                Log.i("MainActivity", "details: " + details);
+
+                Log.i("MainActivity", "Orientation: " + view.getResources().getConfiguration().orientation);
                 if(view.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                    InfoDetailFragment fragment = InfoDetailFragment.newInstance(mCurrent);
-                    getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.detail_fragment_container, fragment)
-                            .addToBackStack(null)
-                            .commit();
+
+                    // Get the FragmentManager and start a transaction.
+                    FragmentManager fragmentManager = getSupportFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    fragment = InfoDetailFragment.newInstance(details);
+                    if(!isFragmentDisplayed) {
+                        /* This code adds a new Fragment using the add() transaction method. The first argument
+                           passed to add() is the layout resource (detail_fragment_container) for the ViewGroup in which
+                           the Fragment should be placed. The second parameter is the Fragment (InfoDetailFragment) to
+                           add. The code then calls commit() for the transaction to take effect.*/
+                        fragmentTransaction.add(R.id.detail_fragment_container, fragment)
+                                            .addToBackStack(null)
+                                            .commitAllowingStateLoss();
+                    } else {
+                        fragmentTransaction.replace(R.id.detail_fragment_container, fragment)
+                                            .addToBackStack(null)
+                                            .commitAllowingStateLoss();
+                    }
                 } else {
+                    Context context = view.getContext();
                     Intent intent = new Intent(context, WeatherInfo.class);
-                    intent.putExtra("mCurrent", mCurrent);
+                    intent.putExtra("details", details);
                     context.startActivity(intent);
                 }
                 break;
@@ -193,4 +224,11 @@ public class MainActivity extends AppCompatActivity implements ItemClickListener
         }
     }
 
+    /* To save the state of the Fragment if the configuration changes */
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the state of the fragment (true=open, false=closed).
+        savedInstanceState.putBoolean(STATE_FRAGMENT, isFragmentDisplayed);
+        savedInstanceState.putString(DETAILS, details);
+        super.onSaveInstanceState(savedInstanceState);
+    }
 }

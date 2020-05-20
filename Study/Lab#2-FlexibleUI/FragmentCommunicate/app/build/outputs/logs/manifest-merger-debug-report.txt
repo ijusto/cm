@@ -1,0 +1,160 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:1-37:12
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:1-37:12
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:1-37:12
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:1-37:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/927f1cbb7fce9332a6ed64bde338ef73/appcompat-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/76ae0e80330af47d2212518098d8e8fd/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/404d309184b7b4b5157ee261d76f6f32/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/59583e9c28bd882787c63160af71f2b5/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/516e9c44c184d961c522c5f2725932ca/vectordrawable-animated-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/33e880c9014b654b5b5cc185bf65304c/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/3cd1c94f8545c50340544836f1042b7e/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/2f8b1ff784afad259e130f10c6d2b05b/vectordrawable-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/72a4878608afaa2bbab6dfdf984bc105/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/a0f31edce083826e2d47048cdfaa8e69/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/ee2d25be390d39b01c558f4f3d0e0995/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/e15f272a7651703ef7306677cb3720ec/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/954d5fd31b9b6da07fa8ef50f891facd/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/5a6911e8464e24fe0a630842754e3a7d/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/a1cb27a9cae1eeee5b9d6f8f7f3095f6/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/81d5c7846a4a31014141fc1eb7374d59/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/f058839fc8e96fe85bb14b5c4d444dad/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/0d0f5a9deb8966c5c8f0014373fee91f/core-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/22e521727651e649911747655eacd71d/versionedparcelable-1.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/8bf3993722993424f1290998c67f2f21/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/95b4d6486dd87f73c829ab10a12b53fa/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/5071459e7d45a533d02ed85bffc40421/lifecycle-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/d5776d79c988299ac205d5e53b62336b/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/52c6cdf6f8aea4d2789a3fe0188ebb23/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/6b4d1ccb0f8372e7a486a85dcb0c33bb/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/ac5a1a3122b5037d749e2098c9a3b4d4/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/8b4070d180f6fe5b24cb7a4851842ed5/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/88c89d4e0b75dd2fc0802c8dd1ad8300/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/7e7a489455db143d3716c00f82b8bc4f/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:1-37:12
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:1-37:12
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:1-37:12
+	package
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:19:5-54
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:1-37:12
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:1-37:12
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:18:11-69
+application
+ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:21:5-35:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/59583e9c28bd882787c63160af71f2b5/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/59583e9c28bd882787c63160af71f2b5/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.core:core:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/0d0f5a9deb8966c5c8f0014373fee91f/core-1.0.0/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/0d0f5a9deb8966c5c8f0014373fee91f/core-1.0.0/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/22e521727651e649911747655eacd71d/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/22e521727651e649911747655eacd71d/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/0d0f5a9deb8966c5c8f0014373fee91f/core-1.0.0/AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:26:9-35
+	android:label
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:24:9-41
+	android:roundIcon
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:25:9-54
+	android:icon
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:23:9-43
+	android:allowBackup
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:22:9-35
+	android:theme
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:27:9-40
+activity#com.example.android.fragmentcommunicate.MainActivity
+ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:28:9-34:20
+	android:name
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:28:19-86
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:29:13-33:29
+action#android.intent.action.MAIN
+ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:30:17-69
+	android:name
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:30:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:32:17-77
+	android:name
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml:32:27-74
+uses-sdk
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/927f1cbb7fce9332a6ed64bde338ef73/appcompat-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/927f1cbb7fce9332a6ed64bde338ef73/appcompat-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/76ae0e80330af47d2212518098d8e8fd/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/76ae0e80330af47d2212518098d8e8fd/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/404d309184b7b4b5157ee261d76f6f32/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/404d309184b7b4b5157ee261d76f6f32/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/59583e9c28bd882787c63160af71f2b5/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/59583e9c28bd882787c63160af71f2b5/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/516e9c44c184d961c522c5f2725932ca/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/516e9c44c184d961c522c5f2725932ca/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/33e880c9014b654b5b5cc185bf65304c/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/33e880c9014b654b5b5cc185bf65304c/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/3cd1c94f8545c50340544836f1042b7e/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/3cd1c94f8545c50340544836f1042b7e/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/2f8b1ff784afad259e130f10c6d2b05b/vectordrawable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/2f8b1ff784afad259e130f10c6d2b05b/vectordrawable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/72a4878608afaa2bbab6dfdf984bc105/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/72a4878608afaa2bbab6dfdf984bc105/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/a0f31edce083826e2d47048cdfaa8e69/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/a0f31edce083826e2d47048cdfaa8e69/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/ee2d25be390d39b01c558f4f3d0e0995/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/ee2d25be390d39b01c558f4f3d0e0995/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/e15f272a7651703ef7306677cb3720ec/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/e15f272a7651703ef7306677cb3720ec/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/954d5fd31b9b6da07fa8ef50f891facd/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/954d5fd31b9b6da07fa8ef50f891facd/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/5a6911e8464e24fe0a630842754e3a7d/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/5a6911e8464e24fe0a630842754e3a7d/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/a1cb27a9cae1eeee5b9d6f8f7f3095f6/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/a1cb27a9cae1eeee5b9d6f8f7f3095f6/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/81d5c7846a4a31014141fc1eb7374d59/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/81d5c7846a4a31014141fc1eb7374d59/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/f058839fc8e96fe85bb14b5c4d444dad/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/f058839fc8e96fe85bb14b5c4d444dad/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/0d0f5a9deb8966c5c8f0014373fee91f/core-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/0d0f5a9deb8966c5c8f0014373fee91f/core-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/22e521727651e649911747655eacd71d/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/22e521727651e649911747655eacd71d/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/8bf3993722993424f1290998c67f2f21/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/8bf3993722993424f1290998c67f2f21/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/95b4d6486dd87f73c829ab10a12b53fa/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/95b4d6486dd87f73c829ab10a12b53fa/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/5071459e7d45a533d02ed85bffc40421/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/5071459e7d45a533d02ed85bffc40421/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/d5776d79c988299ac205d5e53b62336b/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/d5776d79c988299ac205d5e53b62336b/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/52c6cdf6f8aea4d2789a3fe0188ebb23/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/52c6cdf6f8aea4d2789a3fe0188ebb23/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/6b4d1ccb0f8372e7a486a85dcb0c33bb/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/6b4d1ccb0f8372e7a486a85dcb0c33bb/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/ac5a1a3122b5037d749e2098c9a3b4d4/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/ac5a1a3122b5037d749e2098c9a3b4d4/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/8b4070d180f6fe5b24cb7a4851842ed5/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/8b4070d180f6fe5b24cb7a4851842ed5/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/88c89d4e0b75dd2fc0802c8dd1ad8300/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/88c89d4e0b75dd2fc0802c8dd1ad8300/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/7e7a489455db143d3716c00f82b8bc4f/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/inesjusto/.gradle/caches/transforms-2/files-2.1/7e7a489455db143d3716c00f82b8bc4f/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+		ADDED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml
+		INJECTED from /home/inesjusto/Documents/4ano/CM/AndroidModule/cm/Study/Lab#2-FlexibleUI/FragmentCommunicate/app/src/main/AndroidManifest.xml

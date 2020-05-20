@@ -9,6 +9,7 @@
     tools:context="pt.ua.nextweather.ui.WeatherInfo"
     tools:showIn="@layout/activity_weather_info">
 
+    <!-- <FrameLayout-->
     <fragment
         android:id="@+id/detail_fragment_container"
         android:name="pt.ua.nextweather.ui.InfoDetailFragment"

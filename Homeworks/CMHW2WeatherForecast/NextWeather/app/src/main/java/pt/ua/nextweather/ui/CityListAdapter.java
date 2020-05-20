@@ -79,7 +79,7 @@ public class CityListAdapter extends
 
         @Override
         public void onClick(View view) {
-            if (clickListener != null) clickListener.onClick(view, getAdapterPosition());
+            if (clickListener != null) clickListener.onListItemClick(view, getAdapterPosition());
         }
     }
 
